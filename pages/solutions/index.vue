@@ -1,17 +1,22 @@
 <script setup lang="ts">
 import { format } from "date-fns";
 const articles = await queryContent().find();
+const links = [
+  {
+    label: "Home",
+    icon: "i-heroicons-home",
+    to: "/",
+  },
+  {
+    label: "Solutions",
+    icon: "i-heroicons-squares-2x2",
+  },
+];
 </script>
 
 <template>
   <main class="space-y-10">
-    <NuxtLink href="/">
-      <UIcon
-        class="text-2xl"
-        dynamic
-        name="i-material-symbols-arrow-left-alt-rounded"
-      />
-    </NuxtLink>
+    <UBreadcrumb :links="links" />
     <section class="mt-12 flex flex-col gap-y-10 text-sm">
       <h2 class="text-2xl font-semibold">Leetcode</h2>
       <article
