@@ -153,14 +153,6 @@ useHead(() => ({
 </script>
 
 <template>
-  <Head>
-    <Title>Kenny Tran</Title>
-    <Meta content="noindex,nofollow" name="robots" />
-    <Meta
-      name="description"
-      content="I'm Kenny, a frontend developer with a passion for crafting seamless digital experiences."
-    />
-  </Head>
   <main class="flex flex-col gap-y-6">
     <section class="flex flex-col gap-y-6">
       <h2 class="text-2xl font-semibold">Profile</h2>
