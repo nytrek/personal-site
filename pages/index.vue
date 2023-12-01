@@ -161,7 +161,7 @@ useHead(() => ({
       content="I'm Kenny, a frontend developer with a passion for crafting seamless digital experiences."
     />
   </Head>
-  <main class="flex flex-col space-y-12">
+  <main class="flex flex-col gap-y-6">
     <section class="flex flex-col gap-y-6">
       <h2 class="text-2xl font-semibold">Profile</h2>
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
