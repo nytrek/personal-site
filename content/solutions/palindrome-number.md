@@ -1,6 +1,6 @@
 ---
 title: 9. Palindrome Number
-description: "String conversion"
+description: "String conversion solution"
 date: "2023-12-01"
 ---
 
