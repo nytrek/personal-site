@@ -309,7 +309,7 @@ useHead(() => ({
     <section class="flex flex-col gap-y-10 text-sm">
       <h2 class="text-2xl font-semibold">Leetcode</h2>
       <article
-        class="flex items-center gap-x-2 whitespace-nowrap"
+        class="flex items-center gap-x-2 overflow-x-auto whitespace-nowrap"
         v-for="(item, index) in articles.slice().reverse()"
         :key="index"
       >
