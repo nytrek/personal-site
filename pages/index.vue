@@ -294,8 +294,9 @@ useHead(() => ({
         >
           <div class="mb-4 flex items-start justify-between">
             <NuxtImg
-              :src="item.icon.external?.url ?? item.icon.file?.url"
+              alt="logo"
               class="h-4 w-4"
+              :src="item.icon.external?.url ?? item.icon.file?.url"
             />
             <UBadge color="white" variant="solid">{{
               item.properties.Tags["multi_select"][0].name
