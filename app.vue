@@ -19,7 +19,6 @@ useHead(() => ({
 <template>
   <Head>
     <Title>Kenny Tran</Title>
-    <Meta content="noindex,nofollow" name="robots" />
     <Meta
       name="description"
       content="I'm Kenny, a frontend developer with a passion for crafting seamless digital experiences."
