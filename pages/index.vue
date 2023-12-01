@@ -310,7 +310,7 @@ useHead(() => ({
       <h2 class="text-2xl font-semibold">Leetcode</h2>
       <article
         class="flex items-center gap-x-2 whitespace-nowrap"
-        v-for="(item, index) in articles"
+        v-for="(item, index) in articles.slice().reverse()"
         :key="index"
       >
         <NuxtLink :to="item._path">
