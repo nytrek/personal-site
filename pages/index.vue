@@ -302,6 +302,16 @@ useHead(() => ({
       </div>
     </section>
     <section class="flex flex-col gap-y-6 text-sm">
+      <h2 class="text-2xl font-semibold">Featured project</h2>
+      <NuxtLink href="https://www.bostadsval.se/">
+        <UCard
+          class="border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300"
+        >
+          <NuxtImg alt="mockup" class="w-full rounded-lg" src="/mockup.png" />
+        </UCard>
+      </NuxtLink>
+    </section>
+    <section class="flex flex-col gap-y-6 text-sm">
       <h2 class="text-2xl font-semibold">Tech stack</h2>
       <div
         class="flex gap-6 overflow-x-auto p-0.5 sm:grid sm:grid-cols-2 lg:grid-cols-3"
