@@ -154,6 +154,15 @@ useHead(() => ({
 
 <template>
   <main class="flex flex-col gap-y-6">
+    <section class="flex flex-col gap-y-4">
+      <h2 class="text-2xl font-semibold">Summary</h2>
+      <p>
+        Hey 👋 I'm Kenny, a creative mind navigating the digital realms as a
+        frontend developer. My journey is fueled by a genuine passion for
+        sculpting seamless and captivating digital experiences that resonate
+        with users.
+      </p>
+    </section>
     <section class="flex flex-col gap-y-6">
       <h2 class="text-2xl font-semibold">Profile</h2>
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
