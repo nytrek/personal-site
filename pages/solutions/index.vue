@@ -23,7 +23,7 @@ const links = [
         class="flex items-center gap-x-2 overflow-x-auto whitespace-nowrap"
         v-for="(item, index) in articles
           .slice()
-          .sort((a, b) => (a.date < b.date ? -1 : 1))"
+          .sort((a, b) => (a.index < b.index ? -1 : 1))"
         :key="index"
       >
         <NuxtLink :to="item._path">

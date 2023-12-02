@@ -2,6 +2,7 @@
 title: 9. Palindrome Number
 description: "String conversion solution"
 date: "2023-12-01"
+index: 9
 ---
 
 ```cpp

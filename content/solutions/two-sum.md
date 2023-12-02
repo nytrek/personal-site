@@ -2,6 +2,7 @@
 title: 1. Two Sum
 description: "Brute force solution"
 date: "2023-11-30"
+index: 1
 ---
 
 ```cpp
