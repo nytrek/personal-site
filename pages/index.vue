@@ -165,10 +165,12 @@ useHead(() => ({
     </section>
     <section class="flex flex-col gap-y-6">
       <h2 class="text-2xl font-semibold">Profile</h2>
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div
+        class="flex gap-6 overflow-x-auto p-0.5 sm:grid sm:grid-cols-2 lg:grid-cols-3"
+      >
         <NuxtLink href="https://lichess.org/@/nytrek">
           <UCard
-            class="h-full border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300"
+            class="h-52 w-96 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
           >
             <div class="mb-4 flex items-start justify-between">
               <UIcon class="text-2xl" dynamic name="i-simple-icons-lichess" />
@@ -181,29 +183,31 @@ useHead(() => ({
             </div>
           </UCard>
         </NuxtLink>
-        <UCard
-          class="h-full border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300"
-        >
-          <div class="mb-4 flex items-start justify-between">
-            <UIcon class="text-2xl" dynamic name="i-ph-activity-light" />
-            <UBadge color="white" variant="solid">Latest activity</UBadge>
-          </div>
-          <div class="flex flex-col gap-y-1.5">
-            <span>{{ toggl?.description ?? "Inactive" }}</span>
-            <span v-if="toggl">
-              Started
-              {{
-                formatDistanceToNow(new Date(toggl?.start), {
-                  addSuffix: true,
-                })
-              }}
-            </span>
-            <span v-else>N/A</span>
-          </div>
-        </UCard>
+        <div>
+          <UCard
+            class="h-52 w-96 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
+          >
+            <div class="mb-4 flex items-start justify-between">
+              <UIcon class="text-2xl" dynamic name="i-ph-activity-light" />
+              <UBadge color="white" variant="solid">Latest activity</UBadge>
+            </div>
+            <div class="flex flex-col gap-y-1.5">
+              <span>{{ toggl?.description ?? "Inactive" }}</span>
+              <span v-if="toggl">
+                Started
+                {{
+                  formatDistanceToNow(new Date(toggl?.start), {
+                    addSuffix: true,
+                  })
+                }}
+              </span>
+              <span v-else>N/A</span>
+            </div>
+          </UCard>
+        </div>
         <NuxtLink href="https://github.com/nytrek">
           <UCard
-            class="h-full border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300"
+            class="h-52 w-96 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
           >
             <div class="mb-4 flex items-start justify-between">
               <UIcon class="text-2xl" dynamic name="i-uit-github-alt" />
@@ -228,7 +232,7 @@ useHead(() => ({
         </NuxtLink>
         <NuxtLink href="https://www.upwork.com/freelancers/~019a5657f93b409619">
           <UCard
-            class="h-full border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300"
+            class="h-52 w-96 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
           >
             <div class="mb-6 flex items-start justify-between">
               <UIcon class="text-2xl" dynamic name="i-heroicons-user" />
@@ -251,68 +255,74 @@ useHead(() => ({
             </span>
           </UCard>
         </NuxtLink>
-        <UCard
-          class="h-full border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300"
-        >
-          <div class="mb-4 flex items-start justify-between">
-            <UIcon
-              class="text-2xl"
-              dynamic
-              name="i-emojione-monotone-running-shoe"
-            />
-            <UBadge color="white" variant="solid"
-              >{{
-                yAxis ??
-                data.datasets[0].data.reduce((acc, curr) => acc + curr, 0)
-              }}
-              Steps</UBadge
-            >
-          </div>
-          <div>
-            <Line :data="data" :options="options" :plugins="plugins" />
-          </div>
-        </UCard>
-        <UCard
-          class="h-full border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300"
-        >
-          <div class="mb-4 flex items-start justify-between">
-            <UIcon class="text-3xl" dynamic name="i-lets-icons-status" />
-            <UBadge color="white" variant="solid">Open for work</UBadge>
-          </div>
-          <div class="flex flex-col gap-y-3 text-sm">
-            <span>
-              Currently on the lookout for new opportunities to bring my skills
-              to your team. Let's chat and make some magic happen!
-            </span>
-            <NuxtLink
-              class="underline decoration-dotted"
-              href="mailto:kennytran.dev@outlook.com"
-              >Send email</NuxtLink
-            >
-          </div>
-        </UCard>
+        <div>
+          <UCard
+            class="h-52 w-96 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
+          >
+            <div class="mb-4 flex items-start justify-between">
+              <UIcon
+                class="text-2xl"
+                dynamic
+                name="i-emojione-monotone-running-shoe"
+              />
+              <UBadge color="white" variant="solid"
+                >{{
+                  yAxis ??
+                  data.datasets[0].data.reduce((acc, curr) => acc + curr, 0)
+                }}
+                Steps</UBadge
+              >
+            </div>
+            <div>
+              <Line :data="data" :options="options" :plugins="plugins" />
+            </div>
+          </UCard>
+        </div>
+        <div>
+          <UCard
+            class="h-52 w-96 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
+          >
+            <div class="mb-4 flex items-start justify-between">
+              <UIcon class="text-3xl" dynamic name="i-lets-icons-status" />
+              <UBadge color="white" variant="solid">Open for work</UBadge>
+            </div>
+            <div class="flex flex-col gap-y-3 text-sm">
+              <span>
+                Currently on the lookout for new opportunities to bring my
+                skills to your team. Let's chat and make some magic happen!
+              </span>
+              <NuxtLink
+                class="underline decoration-dotted"
+                href="mailto:kennytran.dev@outlook.com"
+                >Send email</NuxtLink
+              >
+            </div>
+          </UCard>
+        </div>
       </div>
     </section>
     <section class="flex flex-col gap-y-6 text-sm">
       <h2 class="text-2xl font-semibold">Tech stack</h2>
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <UCard
-          v-for="(item, index) in notion"
-          :key="index"
-          class="h-full border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300"
-        >
-          <div class="mb-4 flex items-start justify-between">
-            <NuxtImg
-              alt="logo"
-              class="h-4 w-4"
-              :src="item.icon.external?.url ?? item.icon.file?.url"
-            />
-            <UBadge color="white" variant="solid">{{
-              item.properties.Tags["multi_select"][0].name
-            }}</UBadge>
-          </div>
-          <span>{{ item.properties.Name.title[0].text.content }}</span>
-        </UCard>
+      <div
+        class="flex gap-6 overflow-x-auto p-0.5 sm:grid sm:grid-cols-2 lg:grid-cols-3"
+      >
+        <div v-for="(item, index) in notion" :key="index">
+          <UCard
+            class="h-auto w-96 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
+          >
+            <div class="mb-4 flex items-start justify-between">
+              <NuxtImg
+                alt="logo"
+                class="h-4 w-4"
+                :src="item.icon.external?.url ?? item.icon.file?.url"
+              />
+              <UBadge color="white" variant="solid">{{
+                item.properties.Tags["multi_select"][0].name
+              }}</UBadge>
+            </div>
+            <span>{{ item.properties.Name.title[0].text.content }}</span>
+          </UCard>
+        </div>
       </div>
     </section>
     <section class="flex flex-col gap-y-10 text-sm">
