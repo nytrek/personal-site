@@ -1,0 +1,7 @@
+.prose h1, .prose p, .prose code, .prose a, .prose li{
+  color: white;
+}
+
+.prose pre{
+  background-color: transparent;
+}
