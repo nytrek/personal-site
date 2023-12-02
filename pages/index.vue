@@ -170,7 +170,7 @@ useHead(() => ({
       >
         <NuxtLink href="https://lichess.org/@/nytrek">
           <UCard
-            class="h-52 w-96 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
+            class="h-52 w-72 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
           >
             <div class="mb-4 flex items-start justify-between">
               <UIcon class="text-2xl" dynamic name="i-simple-icons-lichess" />
@@ -185,7 +185,7 @@ useHead(() => ({
         </NuxtLink>
         <div>
           <UCard
-            class="h-52 w-96 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
+            class="h-52 w-72 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
           >
             <div class="mb-4 flex items-start justify-between">
               <UIcon class="text-2xl" dynamic name="i-ph-activity-light" />
@@ -207,7 +207,7 @@ useHead(() => ({
         </div>
         <NuxtLink href="https://github.com/nytrek">
           <UCard
-            class="h-52 w-96 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
+            class="h-52 w-72 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
           >
             <div class="mb-4 flex items-start justify-between">
               <UIcon class="text-2xl" dynamic name="i-uit-github-alt" />
@@ -232,7 +232,7 @@ useHead(() => ({
         </NuxtLink>
         <NuxtLink href="https://www.upwork.com/freelancers/~019a5657f93b409619">
           <UCard
-            class="h-52 w-96 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
+            class="h-52 w-72 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
           >
             <div class="mb-6 flex items-start justify-between">
               <UIcon class="text-2xl" dynamic name="i-heroicons-user" />
@@ -257,7 +257,7 @@ useHead(() => ({
         </NuxtLink>
         <div>
           <UCard
-            class="h-52 w-96 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
+            class="h-52 w-72 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
           >
             <div class="mb-4 flex items-start justify-between">
               <UIcon
@@ -280,7 +280,7 @@ useHead(() => ({
         </div>
         <div>
           <UCard
-            class="h-52 w-96 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
+            class="h-52 w-72 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
           >
             <div class="mb-4 flex items-start justify-between">
               <UIcon class="text-3xl" dynamic name="i-lets-icons-status" />
@@ -308,7 +308,7 @@ useHead(() => ({
       >
         <div v-for="(item, index) in notion" :key="index">
           <UCard
-            class="h-auto w-96 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
+            class="h-auto w-52 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
           >
             <div class="mb-4 flex items-start justify-between">
               <NuxtImg
