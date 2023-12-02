@@ -307,7 +307,11 @@ useHead(() => ({
         <UCard
           class="border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300"
         >
-          <NuxtImg alt="mockup" class="w-full rounded-lg" src="/mockup.png" />
+          <NuxtImg
+            alt="mockup"
+            class="w-full rounded-lg"
+            src="https://raw.githubusercontent.com/nytrek/personal-site/main/public/mockup.png"
+          />
         </UCard>
       </NuxtLink>
     </section>
