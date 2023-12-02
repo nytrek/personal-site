@@ -16,7 +16,7 @@ const links = [
 
 <template>
   <main class="space-y-10">
-    <UBreadcrumb :links="links" />
+    <UBreadcrumb :links="links" class="overflow-x-auto whitespace-nowrap" />
     <section class="mt-12 flex flex-col gap-y-10 text-sm">
       <h2 class="text-2xl font-semibold">Leetcode</h2>
       <article

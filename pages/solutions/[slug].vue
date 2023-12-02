@@ -26,7 +26,7 @@ const links = [
 
 <template>
   <main class="space-y-10">
-    <UBreadcrumb :links="links" />
+    <UBreadcrumb :links="links" class="overflow-x-auto whitespace-nowrap" />
     <ContentDoc class="overflow-x-auto">
       <template #not-found>
         <h1>Solution not found</h1>
