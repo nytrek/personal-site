@@ -14,11 +14,23 @@ ChartJS.register(Filler, CategoryScale, LinearScale, PointElement, LineElement);
 
 const yAxis = ref<number | null>(null);
 
-const { data: lichess } = await useFetch("/api/lichess");
-const { data: toggl } = await useFetch("/api/toggl");
-const { data: github } = await useFetch("/api/github");
-const { data: steps } = await useFetch("/api/steps");
-const { data: notion } = await useFetch("/api/notion");
+const { data: profile } = await useAsyncData("profile", async () => {
+  const [lichess, toggl, github, steps, notion] = await Promise.all([
+    $fetch("/api/lichess"),
+    $fetch("/api/toggl"),
+    $fetch("/api/github"),
+    $fetch("/api/steps"),
+    $fetch("/api/notion"),
+  ]);
+
+  return {
+    lichess,
+    toggl,
+    github,
+    steps,
+    notion,
+  };
+});
 
 const articles = await queryContent().limit(5).find();
 
@@ -99,7 +111,7 @@ const data = {
       borderColor: "rgba(64, 196, 99, 0.25)",
       backgroundColor: "rgba(64, 196, 99, 0.25)",
       fill: true,
-      data: (JSON.parse(steps.value as string) as number[]) ?? [
+      data: (JSON.parse(profile.value?.steps as string) as number[]) ?? [
         0, 0, 0, 0, 0, 0, 0,
       ],
     },
@@ -177,9 +189,9 @@ useHead(() => ({
               <UBadge color="white" variant="solid">Chess</UBadge>
             </div>
             <div class="flex flex-col gap-y-1.5">
-              <span>Games: {{ lichess?.games }}</span>
-              <span>Rating: {{ lichess?.rating }}</span>
-              <span>Rating deviation: {{ lichess?.rd }} </span>
+              <span>Games: {{ profile?.lichess.games }}</span>
+              <span>Rating: {{ profile?.lichess.rating }}</span>
+              <span>Rating deviation: {{ profile?.lichess.rd }} </span>
             </div>
           </UCard>
         </NuxtLink>
@@ -192,11 +204,11 @@ useHead(() => ({
               <UBadge color="white" variant="solid">Latest activity</UBadge>
             </div>
             <div class="flex flex-col gap-y-1.5">
-              <span>{{ toggl?.description ?? "Inactive" }}</span>
-              <span v-if="toggl">
+              <span>{{ profile?.toggl?.description ?? "Inactive" }}</span>
+              <span v-if="profile?.toggl">
                 Started
                 {{
-                  formatDistanceToNow(new Date(toggl?.start), {
+                  formatDistanceToNow(new Date(profile?.toggl?.start), {
                     addSuffix: true,
                   })
                 }}
@@ -212,12 +224,15 @@ useHead(() => ({
             <div class="mb-4 flex items-start justify-between">
               <UIcon class="text-2xl" dynamic name="i-uit-github-alt" />
               <UBadge color="white" variant="solid"
-                >{{ github?.totalContributions ?? 0 }} Contributions</UBadge
+                >{{
+                  profile?.github.totalContributions ?? 0
+                }}
+                Contributions</UBadge
               >
             </div>
             <div class="flex gap-0.5 overflow-x-auto rounded-md">
               <div
-                v-for="(item, index) in github?.weeks"
+                v-for="(item, index) in profile?.github.weeks"
                 :key="index"
                 class="flex flex-col gap-0.5"
               >
@@ -320,7 +335,7 @@ useHead(() => ({
       <div
         class="flex gap-6 overflow-x-auto p-0.5 sm:grid sm:grid-cols-2 lg:grid-cols-3"
       >
-        <div v-for="(item, index) in notion" :key="index">
+        <div v-for="(item, index) in profile?.notion" :key="index">
           <UCard
             class="h-auto w-52 border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300 sm:h-full sm:w-full"
           >
