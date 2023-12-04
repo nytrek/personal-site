@@ -1,7 +1,7 @@
 ---
 title: 20. Valid Parenthesis
 description: "Stacks solution"
-date: "2023-12-02"
+date: "2023-12-03"
 index: 14
 ---
 
