@@ -23,6 +23,25 @@ useHead(() => ({
       name="description"
       content="I'm Kenny, a frontend developer with a passion for crafting seamless digital experiences."
     />
+    <Meta property="og:type" content="website" />
+    <Meta property="og:url" content="https://www.nytrek.dev/" />
+    <Meta property="og:title" content="Kenny Tran" />
+    <Meta
+      property="og:description"
+      content="I'm Kenny, a frontend developer with a passion for crafting seamless digital experiences."
+    />
+    <Meta property="og:image" content="https://www.nytrek.dev/preview.png" />
+    <Meta property="twitter:card" content="summary_large_image" />
+    <Meta property="twitter:url" content="https://www.nytrek.dev/" />
+    <Meta property="twitter:title" content="Kenny Tran" />
+    <Meta
+      property="twitter:description"
+      content="I'm Kenny, a frontend developer with a passion for crafting seamless digital experiences."
+    />
+    <Meta
+      property="twitter:image"
+      content="https://www.nytrek.dev/preview.png"
+    />
   </Head>
   <UContainer>
     <UCard class="my-10">
