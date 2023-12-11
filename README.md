@@ -1,3 +1,13 @@
+![preview](./public/preview.png)
+
+Personal website built using NuxtUI
+
+# Features
+- chess stats with [lichess](https://lichess.org/)
+- activity data with [toggl](https://toggl.com/)
+- github graph with [graphql](https://docs.github.com/en/graphql)
+- custom chart with [chartjs](https://www.chartjs.org/)
+
 # Nuxt UI Minimal Starter
 
 Look at [Nuxt docs](https://nuxt.com/docs/getting-started/introduction) and [Nuxt UI docs](https://ui.nuxt.com) to learn more.
