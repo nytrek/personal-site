@@ -170,7 +170,7 @@ useHead(() => ({
       <h2 class="text-2xl font-semibold">Summary</h2>
       <p>
         Hey 👋 I'm Kenny, a creative mind navigating the digital realms as a
-        frontend developer. My journey is fueled by a genuine passion for
+        full-stack developer. My journey is fueled by a genuine passion for
         sculpting seamless and captivating digital experiences that resonate
         with users.
       </p>
