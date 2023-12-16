@@ -46,7 +46,7 @@ useHead(() => ({
   <UContainer>
     <UCard class="my-10">
       <template #header>
-        <div class="flex items-center justify-between">
+        <div class="flex justify-between">
           <div class="flex items-center gap-x-3">
             <UAvatar
               src="https://avatars.githubusercontent.com/u/82717216?v=4"
@@ -54,6 +54,9 @@ useHead(() => ({
             />
             <h1 class="leading-none">Kenny Tran</h1>
           </div>
+          <a href="/cv.pdf">
+            <UIcon class="text-2xl" dynamic name="i-pepicons-print-cv" />
+          </a>
         </div>
       </template>
       <NuxtPage />
