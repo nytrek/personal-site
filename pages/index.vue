@@ -318,7 +318,7 @@ useHead(() => ({
     </section>
     <section class="flex flex-col gap-y-6 text-sm">
       <h2 class="text-2xl font-semibold">Featured project</h2>
-      <NuxtLink href="https://www.bostadsval.se/">
+      <NuxtLink href="https://www.frontend.nytrek.dev/">
         <UCard
           class="border border-transparent transition duration-300 hover:border-gray-600 dark:hover:border-gray-300"
         >
